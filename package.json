@@ -1,0 +1,35 @@
+{
+  "name": "koa_api",
+  "version": "1.0.0",
+  "description": "Using koa to build a RESTFull API",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tgaro/koa-api.git"
+  },
+  "keywords": [
+    "koa",
+    "node",
+    "api",
+    "REST"
+  ],
+  "author": "Tiago Aro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tgaro/koa-api/issues"
+  },
+  "homepage": "https://github.com/Tgaro/koa-api#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "jest": "^23.6.0",
+    "koa": "^2.6.2",
+    "koa-parser": "^1.0.5",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.3.14",
+    "nodemon": "^1.18.7"
+  }
+}
