@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon",
-    "test": "jest --coverage", "test:watch": "jest --watch"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "jest": {
     "testEnvironment": "node"
@@ -31,12 +32,13 @@
     "consign": "^0.1.6",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
+    "jsonwebtoken": "^8.4.0",
     "koa": "^2.6.2",
+    "koa-jwt": "^3.5.1",
     "koa-parser": "^1.0.5",
     "koa-router": "^7.4.0",
     "mongoose": "^5.3.14",
     "nodemon": "^1.18.7",
-    "supertest": "^3.3.0",
     "supertest-as-promised": "^4.0.2"
   }
 }

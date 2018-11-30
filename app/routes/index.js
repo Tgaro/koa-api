@@ -1,3 +1,5 @@
+const auth = require('../auth/auth')
+
 module.exports = router => {
 	router.get("/", async function (ctx) {
 
@@ -12,6 +14,11 @@ module.exports = router => {
 	router.post("/createUser", async function (ctx) {
 
 		await router.app.controllers.index.createUser(ctx, router)
+	})
+
+	router.post("/login", async function (ctx) {
+
+		await auth.validate(router, ctx)
 	})
 
 	router.put("/updateUser/:userid", async function (ctx) {

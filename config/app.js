@@ -3,13 +3,16 @@ const koaRouter = require('koa-router')
 const bodyParser = require('koa-parser')
 const mongoose = require('mongoose')
 const consign = require('consign')
+const jwt = require('koa-jwt')
 const app = new koa()
 const router = new koaRouter()
+const secret = process.env.JWT_SECRET || 'koaapitest'
 
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/koa-apiDB', { useNewUrlParser: true })
 
 app.use(bodyParser())
+app.use(jwt({ secret: secret }).unless({ path: ["/login"] }))
 
 consign()
 	.include('./app/controllers')
