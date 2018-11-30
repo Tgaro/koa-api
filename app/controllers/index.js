@@ -2,14 +2,11 @@ const createUser = async (ctx, router) => {
 
 	const userModel = router.app.models.user.model
 	const newUser = new userModel(ctx.request.body)
-	await newUser.save((err, result) => {
-		
-		err
-		? console.log('Erro', err.errors)
-		: ctx.body = result
-	})
-
-	return ctx
+	try{
+		ctx.body = await newUser.save()
+	}catch(err){
+		ctx.body = err
+	}
 }
 
 const updateUser = async (ctx, router) => {
@@ -32,7 +29,18 @@ const updateUser = async (ctx, router) => {
 const readUser = async (ctx, router) => {
 
 	const userModel = router.app.models.user.model
-	await userModel.find({}, (err, result) => {
+	await userModel.find({}, {'_id': 0}, (err, result) => {
+		
+		err
+		? ctx.body = `Can't complete query due error: ${err}`
+		: ctx.body = result
+	})
+}
+
+const readUserById = async (ctx, router) => {
+
+	const userModel = router.app.models.user.model
+	await userModel.find({userid: ctx.request.params.userid}, (err, result) => {
 		
 		err
 		? ctx.body = `Can't complete query due error: ${err}`
