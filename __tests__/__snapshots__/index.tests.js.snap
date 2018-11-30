@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes: index Should get one user from mongodb 1`] = `
+Object {
+  "header": Object {
+    "connection": "close",
+    "content-length": "1163",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Fri, 30 Nov 2018 13:12:17 GMT",
+  },
+  "req": Object {
+    "data": undefined,
+    "headers": Object {
+      "user-agent": "node-superagent/3.8.3",
+    },
+    "method": "GET",
+    "url": "http://127.0.0.1:50427/",
+  },
+  "status": 200,
+  "text": "[{\\"token\\":\\"123456\\",\\"user\\":\\"Tiago\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"2988390\\",\\"user\\":\\"Tiago Aro\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0},{\\"token\\":\\"4988\\",\\"user\\":\\"Rafael\\",\\"pass\\":\\"ABCD\\",\\"__v\\":0}]",
+}
+`;
