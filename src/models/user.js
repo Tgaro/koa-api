@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
-const schema = mongoose.Schema
 
-const userSchema = new schema({
-	token: {
-		type: String,
-		required: 'You must enter a valid token'
+const userSchema = new mongoose.Schema({
+	id: {
+		type: Number,
+		required: 'You must enter a valid id'
 	},
 	user: {
 		type: String,
@@ -17,5 +16,6 @@ const userSchema = new schema({
 })
 
 const model = mongoose.model('user', userSchema)
+
 
 module.exports = {model}

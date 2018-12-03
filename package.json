@@ -29,16 +29,19 @@
   "homepage": "https://github.com/Tgaro/koa-api#readme",
   "dependencies": {
     "babel-jest": "^23.6.0",
-    "consign": "^0.1.6",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "jsonwebtoken": "^8.4.0",
     "koa": "^2.6.2",
+    "koa-combine-routers": "^4.0.2",
     "koa-jwt": "^3.5.1",
     "koa-parser": "^1.0.5",
+    "koa-passport": "^4.1.1",
     "koa-router": "^7.4.0",
+    "koa-session2": "^2.2.8",
     "mongoose": "^5.3.14",
     "nodemon": "^1.18.7",
+    "passport-local": "^1.0.0",
     "supertest-as-promised": "^4.0.2"
   }
 }
