@@ -1,33 +1,23 @@
-const jsonwebtoken = require('jsonwebtoken')
-const secret = 'koaapitest'
-const expirationTime = 60
+const userModel = require('../models/user').model
 
-const validate = async (router, ctx) => {
+module.exports = validate = async ctx => {
 
-  let pwd
-  const userModel = router.app.models.user.model
+  let pass
   await userModel.findOne(ctx.request.body, {'pass': 1}, (err, result) => {
     
     err
-    ? pwd = `Can't complete query due error: ${err}`
-    : pwd = result.pass
+    ? pass = `Can't complete query due error: ${err}`
+    : pass = result.pass
   })
 
-  console.log(pwd)
-
-  if (ctx.request.body.pass === pwd) {
+  if (ctx.request.body.pass === pass) {
     ctx.status = 200
-    ctx.body = {
-      token: jsonwebtoken.sign({}, secret),
-      message: "Successfully logged in!"
-    }
+    ctx.session.status = 'logged'
+    ctx.redirect('/users')
   } else {
     ctx.status = 401;
-    ctx.body = {
-      message: "Authentication failed"
-    }
+    ctx.redirect('/login')
   }
   return ctx;
-}
 
-module.exports = {validate}
+}
