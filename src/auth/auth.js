@@ -1,5 +1,5 @@
 const jsonwebtoken = require('jsonwebtoken')
-const secret = process.env.JWT_SECRET || 'koaapitest'
+const secret = 'koaapitest'
 const expirationTime = 60
 
 const validate = async (router, ctx) => {
@@ -18,7 +18,7 @@ const validate = async (router, ctx) => {
   if (ctx.request.body.pass === pwd) {
     ctx.status = 200
     ctx.body = {
-      token: jsonwebtoken.sign({ exp: Math.floor(Date.now() / 1000) - (60 * expirationTime)}, secret),
+      token: jsonwebtoken.sign({}, secret),
       message: "Successfully logged in!"
     }
   } else {

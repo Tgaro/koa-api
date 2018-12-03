@@ -6,7 +6,7 @@ const consign = require('consign')
 const jwt = require('koa-jwt')
 const app = new koa()
 const router = new koaRouter()
-const secret = process.env.JWT_SECRET || 'koaapitest'
+const secret = 'koaapitest'
 
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/koa-apiDB', { useNewUrlParser: true })
