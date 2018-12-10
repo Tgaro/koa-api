@@ -1,6 +1,6 @@
 const userModel = require('../models/user').model
 
-const createUser = async (ctx, router) => {
+const createUser = async (ctx) => {
 
 	const newUser = new userModel(ctx.request.body)
 	console.log(await checkUser(newUser, userModel))
@@ -30,7 +30,7 @@ const checkUser = async (user, model) => {
 		return true
 }
 
-const updateUser = async (ctx, router) => {
+const updateUser = async (ctx) => {
 
 	await userModel.findOneAndUpdate(
 
@@ -45,7 +45,7 @@ const updateUser = async (ctx, router) => {
 	})
 }
 
-const readUser = async (ctx, router) => {
+const readUser = async (ctx) => {
 
 	await userModel.find({}, {'_id': 0}, (err, result) => {
 		
@@ -55,7 +55,7 @@ const readUser = async (ctx, router) => {
 	})
 }
 
-const readUserById = async (ctx, router) => {
+const readUserById = async (ctx) => {
 
 	await userModel.find({userid: ctx.request.params.userid}, (err, result) => {
 		
@@ -65,7 +65,7 @@ const readUserById = async (ctx, router) => {
 	})
 }
 
-const deleteUser = async (ctx, router) => {
+const deleteUser = async (ctx) => {
 
 	await userModel.deleteMany({id: ctx.params.id}, (err, result) => {
 		

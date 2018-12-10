@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon",
-    "test": "jest --coverage",
+    "test": "jest --coverage --detectOpenHandles",
     "test:watch": "jest --watch"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.jsx?$"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/Tgaro/koa-api#readme",
   "dependencies": {
     "babel-jest": "^23.6.0",
+    "http": "0.0.0",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "jsonwebtoken": "^8.4.0",
@@ -42,6 +44,7 @@
     "mongoose": "^5.3.14",
     "nodemon": "^1.18.7",
     "passport-local": "^1.0.0",
+    "supertest": "^3.3.0",
     "supertest-as-promised": "^4.0.2"
   }
 }

@@ -15,7 +15,7 @@ module.exports = validate = async ctx => {
     ctx.session.status = 'logged'
     ctx.redirect('/users')
   } else {
-    ctx.status = 401;
+    ctx.status = 401
     ctx.redirect('/login')
   }
   return ctx;
